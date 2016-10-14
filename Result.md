@@ -39,5 +39,6 @@ JS_Parse_Error {
     at expression (eval at <anonymous> (/Users/yuta_hiroto/Programming/webpack2.1.0-verification/node_modules/uglify-js/tools/node.js:28:1), <anonymous>:2878:20)' }
 ```
 
-Criminal: babal-loader  
+criminal: babal-loader  
 cause: babel-loader can't load options property.
+babel-loader's ci: https://travis-ci.org/babel/babel-loader/jobs/166650418#L612

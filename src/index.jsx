@@ -6,3 +6,7 @@ export default function() {
 
   const str = `hogeeee${hoge}aaaaa`;
 }
+
+const bbb = () => {
+
+}

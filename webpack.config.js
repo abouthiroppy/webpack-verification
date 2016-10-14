@@ -18,7 +18,15 @@ module.exports = {
         include: path.join(__dirname, 'src'),
         exclude: /node_modules/,
         use: 'babel',
-        options: {
+      }
+    ]
+  },
+  plugins: [
+    new webpack.LoaderOptionsPlugin({
+      minimize: true,
+      debug: false,
+      options: {
+        babel: {  // move here
           babelrc: false,
           cacheDirectory: PLATFORM === 'win32' ? true : '/tmp/',
           "presets": [
@@ -54,10 +62,7 @@ module.exports = {
           }
         }
       }
-    ]
-  },
-  plugins: [
-    new webpack.LoaderOptionsPlugin({ minimize: true, debug: false }),
+    }),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
