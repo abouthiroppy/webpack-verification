@@ -40,5 +40,5 @@ JS_Parse_Error {
 ```
 
 criminal: babal-loader  
-cause: babel-loader can't load options property.
+cause: babel-loader can't load options property.  
 babel-loader's ci: https://travis-ci.org/babel/babel-loader/jobs/166650418#L612
