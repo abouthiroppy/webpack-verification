@@ -42,3 +42,13 @@ JS_Parse_Error {
 criminal: babal-loader  
 cause: babel-loader can't load options property.  
 babel-loader's ci: https://travis-ci.org/babel/babel-loader/jobs/166650418#L612
+supplemental:
+babel-loader has a query of options(https://github.com/webpack/webpack/issues/3118#issuecomment-252997261) when webpack@1.13.2.  
+
+```?{"babelrc":false,"cacheDirectory":"/tmp/","presets":["react",["es2015",{"modules":false}],"stage-0"],"env":{"development":{"plugins":[["react-transform",{"transforms":[{"transform":"react-transform-hmr","imports":["react"],"locals":["module"]},{"transform":"react-transform-catch-errors","imports":["react","redbox-react"]}]}],"transform-runtime","add-module-exports","transform-class-properties"]},"production":{"plugins":["transform-runtime","add-module-exports","transform-class-properties"]}}}
+```
+
+However, babel-loader can not get options when webpack@2.1.0-beta.25.  
+The query(this.query) is empty string.  
+
+here: https://github.com/babel/babel-loader/blob/master/index.js#L80  
