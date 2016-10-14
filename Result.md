@@ -38,3 +38,6 @@ JS_Parse_Error {
     at maybe_assign (eval at <anonymous> (/Users/yuta_hiroto/Programming/webpack2.1.0-verification/node_modules/uglify-js/tools/node.js:28:1), <anonymous>:2859:20)\n
     at expression (eval at <anonymous> (/Users/yuta_hiroto/Programming/webpack2.1.0-verification/node_modules/uglify-js/tools/node.js:28:1), <anonymous>:2878:20)' }
 ```
+
+Criminal: babal-loader
+cause: babel-loader can't load options property.
